@@ -1,14 +1,16 @@
-torch
-transformers
+wheel
 wandb
-numpy
-scipy
-seaborn
-pandas
+numpy==1.19.5
+scipy==1.9.2
+pandas==1.4.4
+matplotlib==3.3
 nmslib
 tabulate
 tqdm
+torch==1.13.0+cu117 torchvision==0.14.0+cu117 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
+transformers<4.34.0
 sentence-transformers
 accelerate
 libpecos
 cython
+git+https://github.com/yxliu-ntu/pyxclib.git

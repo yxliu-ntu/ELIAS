@@ -98,7 +98,8 @@ for epoch in range(args.num_epochs):
         metrics = evaluator.predict_and_track_eval(unwrap(net), epoch, epoch_loss)
         if metrics is not None:
             logging.info('\n'+metrics.to_csv(sep='\t', index=False))
-            wandb.log({k: metrics.iloc[0][k] for k in ['P@1', 'P@5', 'PSP@1', 'PSP@5', 'nDCG@5', 'R@100']}, step=epoch)
+            #wandb.log({k: metrics.iloc[0][k] for k in ['P@1', 'P@5', 'PSP@1', 'PSP@5', 'nDCG@5', 'R@100']}, step=epoch)
+            wandb.log({k: metrics.iloc[0][k] for k in ['P@1', 'P@5', 'PSP@1', 'PSP@5', 'nDCG@5']}, step=epoch)
             wandb.log({'metrics': metrics}, step=epoch)
         sys.stdout.flush()
     accelerator.wait_for_everyone()
