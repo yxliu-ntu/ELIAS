@@ -29,8 +29,8 @@ bsz: 128 # Mini-batch size
 eval_interval: 3 # Evaluate current model at every specified number of epochs
 eval_topk: 100 # Number of label predictions for each test point during evaluation
 w_accumulation_steps: 1 # It's more efficient to apply weight updates to classification matrix after every accumulation steps
-lr_wl: 0.005 # Learning rate for the classifier matrix (W_l) parameters
-lr_tf: 5.e-5 # Learning rate for the transformer encoder (\phi) parameters
+lr_wl: 0.01 # Learning rate for the classifier matrix (W_l) parameters
+lr_tf: 1.e-4 # Learning rate for the transformer encoder (\phi) parameters
 lr: 0.0001 # Learning rate for the rest of the parameters
 weight_decay: 0.01 # Optimizer weight decay
 amp_encode: True # Encode input (i.e. transformer forward) using pytorch amp
